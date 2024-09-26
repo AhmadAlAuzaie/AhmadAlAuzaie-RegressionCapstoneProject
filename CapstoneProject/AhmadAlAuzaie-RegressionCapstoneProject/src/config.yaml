@@ -1,0 +1,27 @@
+# This file holds the settings for our student dropout prediction project.
+data_path: "capstone_project.csv"  # The dataset we're using for analysis.
+target_column: "dropout_risk"  # This is the column we're trying to predict: will the student drop out or not?
+features:  # These are the key pieces of information (features) we'll use to make predictions.
+  - student_id
+  - average_grade
+  - attendance_rate
+  - number_of_absences
+  - homework_submission_rate
+  - participation_score
+  - parental_involvement
+  - previous_dropout_reports
+  - behavioral_issues
+  - extracurricular_activities
+
+# Model settings
+model:
+  type: "RandomForest"  # We'll use a RandomForest model here. Feel free to change this if experimenting.
+  hyperparameters:
+    n_estimators: 100  # The number of trees in the forest.
+    max_depth: 10  # The maximum depth of each tree.
+    random_state: 42  # A fixed seed for reproducibility.
+
+# How we split the data
+train_test_split:
+  test_size: 0.2  # We'll reserve 20% of the data for testing, so we don't overfit.
+  random_state: 42  # Keeping this consistent across experiments.
