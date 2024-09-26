@@ -29,5 +29,5 @@ def load_and_prepare_data():
                                                                                                                'parental_involvement', 'extracurricular_activities']])
 
     # We'll split the data into training and test sets so we can evaluate how well the model performs on unseen data.
-    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = config['train_test_split']['test_size'], random_state=config['train_test_split']['random_state'])
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = config['train_test_split']['test_size'], random_state = config['train_test_split']['random_state'])
     return x_train, x_test, y_train, y_test
