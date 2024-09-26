@@ -22,7 +22,7 @@ def load_and_prepare_data():
 
     # We'll scale the numerical columns so they're all on the same scale. 
     # This is generally a good idea when working with different ranges of data.
-    scaler = StandardScaler()
+    scaler =StandardScaler()
     x[['average_grade', 'attendance_rate', 'number_of_absences', 'homework_submission_rate',
        'participation_score', 'parental_involvement', 'extracurricular_activities']] = scaler.fit_transform(x[['average_grade', 'attendance_rate', 'number_of_absences', 
                                                                                                                'homework_submission_rate', 'participation_score', 
